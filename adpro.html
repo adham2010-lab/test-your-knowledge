@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Your Knowledge</title>
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2018/02/12/09/39/background-3147808_640.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-top: 20px;
+            color: black;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+        .start-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 24px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .start-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Your Knowledge</h1>
+    <div class="content">
+        <input type="text" placeholder="Enter your name" id="nameInput">
+        <button onclick="submitName()">Submit Name</button>
+        <input type="number" placeholder="Enter your age" id="ageInput">
+        <button onclick="submitAge()">Submit Age</button>
+        <button class="start-button" onclick="startQuiz()">Let's Start</button>
+    </div>
+    <script>
+        function submitName() {
+            let name = document.getElementById('nameInput').value;
+            if (name) {
+                alert('Welcome, ' + name + '!');
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+        function submitAge() {
+            let age = document.getElementById('ageInput').value;
+            if (age) {
+                alert('You are ' + age + ' years old!');
+            } else {
+                alert('Please enter your age.');
+            }
+        }
+        function startQuiz() {
+            window.location.href = "https://adham2010-lab.github.io/test-your-knowledge/adpro2.html"; // Your public GitHub Pages URL
+        }
+    </script>
+</body>
+</html>
